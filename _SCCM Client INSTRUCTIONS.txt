@@ -1,0 +1,25 @@
+SCCM Client Install/Uninstall Instructions:
+
+**NEW** Remote PC Installation/Repair (Automatically uninstalls prior to installing):
+1.	Copy the "_Install-SCCM_Client.ps1" from this folder to your machine (example: C:\Users\%USERNAME%\Desktop\_Install-SCCM_Client.ps1):
+	a.	\\vm0pwsccasa0001.corp.chartercom.com\EUC\SCCMClient\_Install-SCCM_Client.ps1
+2.	Execute as an Admin on your machine:
+	a.	Powershell.exe -File "C:\Users\$Env:USERNAME\Desktop\_Install-SCCM_Client.ps1" -RemotePC "<remote PC hostname>"
+
+Local Installation/Repair (Automatically uninstalls prior to installing):
+1.	Copy the "_Install-SCCM_Client.ps1" from this folder to the local machine (example: c:\temp\_Install-SCCM_Client.ps1):
+	a.	\\vm0pwsccasa0001.corp.chartercom.com\EUC\SCCMClient\_Install-SCCM_Client.ps1
+2.	Execute as an Admin on the local machine:
+	a.	Powershell.exe -File "c:\temp\_Install-SCCM_Client.ps1"
+
+Local Uninstall ONLY:
+1.	Copy the "_Install-SCCM_Client.ps1" from this folder to the local machine (example: c:\temp\_Install-SCCM_Client.ps1):
+	a.	\\vm0pwsccasa0001.corp.chartercom.com\EUC\SCCMClient\_Install-SCCM_Client.ps1
+2.	Execute as an Admin on the local machine:
+	a.	Powershell.exe -File "c:\temp\_Install-SCCM_Client.ps1" -Uninstall
+
+
+
+NOTES:
+	-PC Must be on LAN/VPN to perform either operation
+	-Use absolute (full) path to the script in your command

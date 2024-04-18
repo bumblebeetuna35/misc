@@ -1,0 +1,21 @@
+WMI Reset/Repair Instructions:
+
+Local Repair:
+1.	Copy the "Reset-Wmi.ps1" from this folder to the local machine (example: c:\temp\Reset-Wmi.ps1):
+	a.	\\vm0pwsccasa0001.corp.chartercom.com\EUC\SCCMClient\Reset-Wmi.ps1
+
+2a.	Option 1: Execute a basic repair as an Admin on the local machine:
+	a.	Powershell.exe -File "c:\temp\Reset-Wmi.ps1"
+2b.	-OR- Option 2: Execute an advanced repair as an Admin on the local machine:
+	a.	Powershell.exe -File "c:\temp\Reset-Wmi.ps1" -AdvancedRepair
+
+NOTES:
+	-Use absolute (full) path to the script in your command.
+	-Execute an advanced repair (2b) if a basic repair and a reboot do not restore functionality.
+	-This will repair an installed CCM Client, but will not install the CCM Client when it's not present.
+	-If the CCM Client is not installed, please install after executing this script.
+
+*Please read the script details in the script header for further details.
+
+
+Version 2024.04.17
